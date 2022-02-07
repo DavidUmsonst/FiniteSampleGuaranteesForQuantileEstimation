@@ -2,7 +2,7 @@
 
 In this repository you can find the code used in the article **Finite Sample Guarantees For Quantile Estimation - An Application to Detector Threshold Tuning**. You can find the arXiv version of the article [here](https://arxiv.org/abs/2105.12239).
 
-In this article, we determine how many independent and identically distributed samples of a certain distribution are needed to estimate the distribution's quantile with a certain confidence
+In this article, we determine how many independent and identically distributed samples of a certain distribution are needed to estimate the distribution's quantile such that the estimate is close to the true quantile with a high probability. We apply these sample guarantees in the tuning of a detector threshold.
 
 This repository provides the code to reproduce the result presented in the paper. The code was originally coded in MATLAB, but we also provide two Julia scripts to reproduce the simulated results.
 
