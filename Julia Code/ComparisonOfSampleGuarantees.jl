@@ -40,6 +40,6 @@ for i=1:n_gamma
 end
 # plot finite sample guarantees
 pyplot()
-plot(gamma_iter,[N_beta,N_DKW,N_vys],linestyle= [:solid :dashdot :dash], color =[:black :blue :red], label=[L"N_{\mathrm{beta}}" L"N_{\mathrm{DKW}}" L"N_{\mathrm{vys}}"] )#,:black)#,label="N_{\mathrm{beta}}")
+plot(gamma_iter,[N_beta,N_DKW,N_vys],linestyle= [:solid :dashdot :dash], color =[:black :blue :red], label=[L"N_{\mathrm{beta}}" L"N_{\mathrm{DKW}}" L"N_{\mathrm{VP}}"] )#,:black)#,label="N_{\mathrm{beta}}")
 xlabel!(L"$\gamma$")
 ylabel!("Sample size")
