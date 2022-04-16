@@ -28,5 +28,5 @@ The code can be divided into the following three separate parts:
       ...run the file  `HistogramOfEmpiricalFarForFiniteGuarantees.jl`.
 3. **Applying the results to real data**
 
-    To reproduce Fig. 4, Fig. 5, and Fig. 6 one can run the file `HistogramOfEmpiricalFarForFiniteGuarantees.m`, which uses the real data saved in `DataOfTCLabForDetectorTuning.mat` and the file`FiniteSampleBoundBetaConfInt.m`.  *Note for reproducing these result only MATLAB code is available!*
+    To reproduce Fig. 4 and Fig. 5 one can run the file `HistogramOfEmpiricalFarForFiniteGuarantees.m`, which uses the real data saved in `DataOfTCLabForDetectorTuning.mat` and the file`FiniteSampleBoundBetaConfInt.m`.  *Note for reproducing these result only MATLAB code is available!*
     
