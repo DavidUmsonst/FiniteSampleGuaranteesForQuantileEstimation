@@ -28,7 +28,7 @@ rho_guarantee=0.05 # confidence interval with 1-rho_guarantee
 epsilon_diff=0.01 # allowed deviation from desired quantile
 N_beta=zeros(n_gamma)
 N_DKW=zeros(n_gamma)
-N_vys=zeros(n_gamma)
+N_VP=zeros(n_gamma)
 
 # calculate the sample guarantees for several values of gamma
 for i=1:n_gamma
@@ -36,10 +36,10 @@ for i=1:n_gamma
     den_gamma=denominator(irreducibleFraction)
     N_beta[i]=FiniteSampleBoundBetaConfInt(gamma_iter[i],1-rho_guarantee,epsilon_diff)
     N_DKW[i]=ceil(log(2/rho_guarantee)/(2*epsilon_diff^2*den_gamma))*den_gamma
-    N_vys[i]=ceil((1/den_gamma)*(4/9*gamma_iter[i]*(1-gamma_iter[i])/(epsilon_diff^2*rho_guarantee)-1))*den_gamma-1
+    N_VP[i]=ceil((1/den_gamma)*(4/9*gamma_iter[i]*(1-gamma_iter[i])/(epsilon_diff^2*rho_guarantee)-1))*den_gamma-1
 end
 # plot finite sample guarantees
 pyplot()
-plot(gamma_iter,[N_beta,N_DKW,N_vys],linestyle= [:solid :dashdot :dash], color =[:black :blue :red], label=[L"N_{\mathrm{beta}}" L"N_{\mathrm{DKW}}" L"N_{\mathrm{VP}}"] )#,:black)#,label="N_{\mathrm{beta}}")
+plot(gamma_iter,[N_beta,N_DKW,N_VP],linestyle= [:solid :dashdot :dash], color =[:black :blue :red], label=[L"N_{\mathrm{beta}}" L"N_{\mathrm{DKW}}" L"N_{\mathrm{VP}}"] )#,:black)#,label="N_{\mathrm{beta}}")
 xlabel!(L"$\gamma$")
 ylabel!("Sample size")
